@@ -11,6 +11,7 @@ while True:
         print(f"The right number was {number}! Maybe next time!")
         break    
     else:
-        print("Sorry! That's not quite right, try again! (Enter 'q' if you'd like to quit)")
-
-
+        if guess.isdigit() and int(guess) > number:
+            print("Too high.. try again! (Enter 'q' if you'd like to quit)")
+        if guess.isdigit() and int(guess) < number:
+            print("Too low.. try again! (Enter 'q' if you'd like to quit)")
